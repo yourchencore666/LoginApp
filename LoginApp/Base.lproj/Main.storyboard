@@ -41,7 +41,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="38" translatesAutoresizingMaskIntoConstraints="NO" id="Rax-40-8Tn">
-                                <rect key="frame" x="60" y="578" width="294" height="30"/>
+                                <rect key="frame" x="60" y="521" width="294" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H3f-bp-ZZY">
                                         <rect key="frame" x="0.0" y="0.0" width="133" height="30"/>
@@ -63,8 +63,8 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGray4Color"/>
                         <constraints>
-                            <constraint firstItem="Rax-40-8Tn" firstAttribute="top" secondItem="fQO-w2-dqu" secondAttribute="bottom" constant="65" id="6K6-qB-TQF"/>
                             <constraint firstItem="fQO-w2-dqu" firstAttribute="centerX" secondItem="Rax-40-8Tn" secondAttribute="centerX" id="Aud-ga-IRg"/>
+                            <constraint firstItem="Rax-40-8Tn" firstAttribute="top" secondItem="fQO-w2-dqu" secondAttribute="bottom" constant="8" symbolic="YES" id="DRe-51-cH1"/>
                             <constraint firstItem="eRn-ff-P1G" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="226" id="Hj7-S7-lMV"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eRn-ff-P1G" secondAttribute="trailing" constant="60" id="MUr-5L-B7A"/>
                             <constraint firstItem="fQO-w2-dqu" firstAttribute="top" secondItem="eRn-ff-P1G" secondAttribute="bottom" constant="93" id="U9O-it-PVk"/>
@@ -89,38 +89,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="1" translatesAutoresizingMaskIntoConstraints="NO" id="xme-2v-p0S">
-                                <rect key="frame" x="129" y="164" width="156" height="47"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="39"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LrQ-Tb-pmV">
                                 <rect key="frame" x="158" y="397" width="98" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Log out"/>
                                 <connections>
-                                    <action selector="clickLogOutBtn" destination="BCT-d4-2ut" eventType="touchUpInside" id="9rf-CD-pQt"/>
+                                    <segue destination="M1I-BR-JMi" kind="unwind" unwindAction="unwindFor:" id="fye-TV-F4f"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="1" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xme-2v-p0S">
+                                <rect key="frame" x="31" y="158" width="354" height="47"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="39"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="LAg-Gn-OtB"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="LAg-Gn-OtB" firstAttribute="bottom" secondItem="xme-2v-p0S" secondAttribute="bottom" constant="597" id="8bG-J4-Zam"/>
+                            <constraint firstItem="LAg-Gn-OtB" firstAttribute="bottom" secondItem="xme-2v-p0S" secondAttribute="bottom" constant="603" id="8bG-J4-Zam"/>
                             <constraint firstItem="LrQ-Tb-pmV" firstAttribute="centerX" secondItem="B8C-3I-aem" secondAttribute="centerX" id="DPd-H7-7OW"/>
                             <constraint firstItem="LrQ-Tb-pmV" firstAttribute="centerY" secondItem="B8C-3I-aem" secondAttribute="centerY" id="WIo-go-6QI"/>
-                            <constraint firstItem="xme-2v-p0S" firstAttribute="width" secondItem="B8C-3I-aem" secondAttribute="width" multiplier="0.376812" id="Wi0-z5-Jim"/>
-                            <constraint firstItem="xme-2v-p0S" firstAttribute="centerX" secondItem="B8C-3I-aem" secondAttribute="centerX" id="YLV-KO-8cC"/>
-                            <constraint firstItem="xme-2v-p0S" firstAttribute="width" secondItem="B8C-3I-aem" secondAttribute="height" multiplier="78:421" id="jTY-Kt-Gom"/>
-                            <constraint firstItem="xme-2v-p0S" firstAttribute="top" secondItem="LAg-Gn-OtB" secondAttribute="top" constant="164" id="s8c-DZ-cZZ"/>
+                            <constraint firstItem="xme-2v-p0S" firstAttribute="centerX" secondItem="B8C-3I-aem" secondAttribute="centerX" constant="1" id="YLV-KO-8cC"/>
+                            <constraint firstItem="xme-2v-p0S" firstAttribute="width" secondItem="B8C-3I-aem" secondAttribute="height" multiplier="78:421" constant="198" id="jTY-Kt-Gom"/>
+                            <constraint firstItem="xme-2v-p0S" firstAttribute="top" secondItem="LAg-Gn-OtB" secondAttribute="top" constant="158" id="s8c-DZ-cZZ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="8VH-MQ-WmD"/>
+                    <connections>
+                        <outlet property="welcomeLabel" destination="xme-2v-p0S" id="YN1-SV-Sib"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hd3-H1-aKT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="M1I-BR-JMi" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="575" y="108"/>
+            <point key="canvasLocation" x="573.91304347826087" y="107.8125"/>
         </scene>
     </scenes>
     <resources>
